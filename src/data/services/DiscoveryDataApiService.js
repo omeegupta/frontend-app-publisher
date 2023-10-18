@@ -2,8 +2,18 @@ import { getAuthenticatedHttpClient } from '@edx/frontend-platform/auth';
 
 import { PAGE_SIZE } from '../constants/table';
 
-const discoveryBaseUrl = `${process.env.DISCOVERY_API_BASE_URL}/api/v1`;
-const publisherBaseUrl = `${process.env.DISCOVERY_API_BASE_URL}/publisher/api`;
+// const discoveryBaseUrl = `${process.env.DISCOVERY_API_BASE_URL}/api/v1`;
+// const publisherBaseUrl = `${process.env.DISCOVERY_API_BASE_URL}/publisher/api`;
+
+
+const discoveryBaseUrl = 'http://discovery.om.shivajifoundation.co.in/api/v1';
+const publisherBaseUrl = 'http://discovery.om.shivajifoundation.co.in/publisher/api';
+
+
+const discovery_oldBaseUrl = `${process.env.DISCOVERY_API_BASE_URL}/api/v1`;
+
+console.log("Discover API", discoveryBaseUrl);
+console.log("Discover OLD API", discovery_oldBaseUrl);
 
 class DiscoveryDataApiService {
   static fetchCourse(uuid) {
